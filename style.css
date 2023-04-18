@@ -9,7 +9,7 @@
     height: 3.5rem;
 }
 .nav {
-    background-image: linear-gradient(270deg, #F02D3A, #ffffff);
+    background-image: linear-gradient(270deg, #ff0000, #ffffff);
     box-shadow: 2px 2px rgba(0,0,0,0.15);
 }
 .nav-link {

@@ -10,8 +10,8 @@
     height: 3.8rem;
 }
 .nav {
-    background-image: linear-gradient(270deg, var(--light-red), var(--grey));
-    box-shadow: 2px 2px rgba(0,0,0,0.15);
+    background-image: linear-gradient(290deg, var(--light-red), var(--grey));
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
 }
 .nav-link {
     color: var(--white);

@@ -18,6 +18,7 @@
 }
 .navbar-brand {
     color: var(--white);
+    margin-top: 3px;
 }
 .text-white {
     color: var(--white);

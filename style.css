@@ -2,14 +2,14 @@
 :root {
     --white: #eff6ee;
     --black: #22181c;
-    --light-blue: #5865F2;
+    --blue: #0818ca;
     --light-red: #ff0000;
 }
 .logo {
     height: 3.5rem;
 }
 .nav {
-    background-image: linear-gradient(270deg, #700e1d, #F02D3A);
+    background-image: linear-gradient(270deg, #ffffff, #F02D3A);
     box-shadow: 2px 2px rgba(0,0,0,0.15);
 }
 .nav-link {
@@ -31,7 +31,7 @@ a.discord {
     color: var(--white);
 }
 a.discord:hover {
-    color: var(--light-blue);
+    color: var(--blue);
 }
 div.tebex {
     background-color: var(--black);
@@ -41,5 +41,5 @@ a.tebex {
     color: var(--white);
 }
 a.tebex:hover {
-    color: var(--light-blue);
+    color: var(--blue);
 }

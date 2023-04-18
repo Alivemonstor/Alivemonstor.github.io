@@ -1,1 +1,44 @@
 
+         :root {
+                --white: #eff6ee;
+                --black: #22181c;
+                --light-red: #5865F2;
+            }
+            .logo {
+                height: 3.5rem;
+            }
+            .nav {
+                background-image: linear-gradient(270deg, #DD0426, #F02D3A);
+                box-shadow: 2px 2px rgba(0,0,0,0.15);
+            }
+            .nav-link {
+                color: var(--white);
+            }
+            .navbar-brand {
+                color: var(--white);
+            }
+            .text-white {
+                color: var(--white);
+            }
+            .bg-body-black {
+                background-color: var(--black);
+            }
+            div.discord {
+                background-color: var(--black);
+            }
+            a.discord {
+                color: var(--white);
+            }
+            a.discord:hover {
+                color: var(--light-red);
+            }
+            div.tebex {
+                background-color: var(--black);
+                margin-right: 5px;
+            }
+            a.tebex {
+                color: var(--white);
+            }
+            a.tebex:hover {
+                color: var(--light-red);
+            }

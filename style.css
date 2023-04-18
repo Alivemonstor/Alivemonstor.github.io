@@ -6,10 +6,10 @@
     --light-red: #ff0000;
 }
 .logo {
-    height: 3.5rem;
+    height: 3.8rem;
 }
 .nav {
-    background-image: linear-gradient(270deg, #ff0000, #ffffff);
+    background-image: linear-gradient(270deg, var(--light-red), var(--white));
     box-shadow: 2px 2px rgba(0,0,0,0.15);
 }
 .nav-link {

@@ -4,12 +4,13 @@
     --black: #22181c;
     --blue: #0818ca;
     --light-red: #ff0000;
+    --grey: #353434;
 }
 .logo {
     height: 3.8rem;
 }
 .nav {
-    background-image: linear-gradient(270deg, var(--light-red), var(--white));
+    background-image: linear-gradient(270deg, var(--light-red), var(--grey));
     box-shadow: 2px 2px rgba(0,0,0,0.15);
 }
 .nav-link {

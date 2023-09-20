@@ -1,3 +1,3 @@
 setInterval(function(){
-    $('#text-rotator').html('texteteetet')
+    $('#text-rotator').html('changetexthere')
 }, 5000)

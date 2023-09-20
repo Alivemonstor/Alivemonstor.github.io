@@ -5,15 +5,16 @@
     --blue: #4551d4;
     --light-red: #ff0000;
     --grey: #353434;
+    font-family: 'Lato', 'sans-serif';
 }
 .logo {
     height: 3.8rem;
 }
 
 .logo-info {
+    color: var(--white);
     height: 3.8rem;
 }
-
 .nav {
     background-image: linear-gradient(0deg, var(--light-red), var(--grey));
     box-shadow: 2px 2px rgba(0, 0, 0, 0.2);

@@ -24,7 +24,7 @@
 
     }
     75% {
-        transform: translate(-5px, 5px);
+        transform: translate(5px, -5px);
 
     }
     100% {

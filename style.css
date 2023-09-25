@@ -9,9 +9,6 @@
 }
 .logo {
     height: 3.8rem;
-    position: relative;
-    display: inline-block;
-    animation: glitch 1s infinite;
 }
 
 @keyframes glitch {
@@ -35,6 +32,9 @@
     }
 }
 
+.logo:hover {
+    animation: glitch 1s infinite;
+}
 
 .logo-info {
     color: var(--white);

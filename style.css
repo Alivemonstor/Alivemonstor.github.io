@@ -3,7 +3,7 @@
   overflow: hidden;
 }
 
-.topnav button {
+.topnav a {
   float: left;
   color: white;
   text-align: center;
@@ -14,12 +14,12 @@
   border: none;
 }
 
-.topnav button:hover {
+.topnav a:hover {
   background-color: #ddd;
   color: black;
 }
 
-.topnav button.active {
+.topnav a.active {
   background-color: #04AA6D;
   color: white;
 }
@@ -30,4 +30,11 @@
 
 #mehome {
   display: block;
+  width: 25%;
+  height: 25%;
+}
+
+img {
+  width: 250px;
+  height: 250px;
 }

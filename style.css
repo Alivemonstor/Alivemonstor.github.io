@@ -10,7 +10,6 @@
   padding: 10px 10px;
   text-decoration: none;
   font-size: 12px;
-  background-color: #333;
   border: none;
 }
 
@@ -24,17 +23,14 @@
   color: white;
 }
 
-.me {
-  display: none;
-}
-
 #mehome {
   display: block;
-  width: 25%;
-  height: 25%;
 }
 
-img {
-  width: 250px;
-  height: 250px;
+img { 
+  width: 100%;
+}
+
+#carouselExampleIndicators {
+  display: none;
 }

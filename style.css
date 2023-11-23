@@ -23,14 +23,24 @@
   color: white;
 }
 
-#mehome {
-  display: block;
-}
-
-img { 
+img {
   width: 100%;
 }
 
-#carouselExampleIndicators {
-  display: none;
+.imgbox {
+  width: 25%;
 }
+
+.mainelement{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.infosection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: darkslategrey;
+}
+

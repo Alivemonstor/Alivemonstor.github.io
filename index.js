@@ -1,11 +1,10 @@
 $(document).ready(function(){
 	var i = 0;
 	var txt = 'Hi, I\'m Jayden, Welcome To My Website';
-	var speed = 50;
+	var speed = 70;
 	setTimeout(typeWriter, speed);
 
 	function typeWriter() {
-		console.log("madeit")
 	  if (i < txt.length) {
 	    document.getElementById("typing").innerHTML += txt.charAt(i);
 	    i++;

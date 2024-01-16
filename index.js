@@ -30,7 +30,6 @@ function handle_collision() {
   	let top = dvdclass.infoblock.offsetTop;
   	let win_height = document.getElementsByClassName('background-info').backgroundinfo.offsetHeight;
   	let win_width = document.getElementsByClassName('background-info').backgroundinfo.offsetWidth;
-  	console.log(dvd_height, dvd_width, left, top, win_height,win_width)
 	
   	if (left <= 0 || left + dvd_width >= win_width) {
   	  x_incr = ~x_incr + 1;

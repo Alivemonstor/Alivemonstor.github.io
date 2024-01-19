@@ -1,4 +1,4 @@
-let dvdclass = document.getElementsByClassName('infosection');
+let blockclass = document.getElementsByClassName('infosection');
 let interval_id;
 let x_incr = 1;
 let y_incr = 1;
@@ -19,38 +19,40 @@ $(document).ready(function(){
 	    setTimeout(typeWriter, speed);
 	  }
 	}
+
+
+
 })
 
-
 function handle_collision() {
-  	let dvd_height = dvdclass.infoblock.offsetHeight;
-  	let dvd_width = dvdclass.infoblock.offsetWidth;
-  	let left = dvdclass.infoblock.offsetLeft;
-  	let top = dvdclass.infoblock.offsetTop;
-  	let win_height = document.getElementsByClassName('background-info').backgroundinfo.offsetHeight;
-  	let win_width = document.getElementsByClassName('background-info').backgroundinfo.offsetWidth;
-	
-  	if (left <= 0 || left + dvd_width >= win_width) {
-  	  x_incr = ~x_incr + 1;
-  	}
-  	if (top <= 30 || top + dvd_height >= win_height) {
-  	  y_incr = ~y_incr + 1;
-  	}
+  let height = blockclass.infoblock.offsetHeight;
+  let width = blockclass.infoblock.offsetWidth;
+  let left = blockclass.infoblock.offsetLeft;
+  let top = blockclass.infoblock.offsetTop;
+  let win_height = document.getElementsByClassName('background-info').backgroundinfo.offsetHeight;
+  let win_width = document.getElementsByClassName('background-info').backgroundinfo.offsetWidth;
+
+  if (left <= 0 || left + width >= win_width) {
+    x_incr = ~x_incr + 1;
+  }
+  if (top <= 30 || top + height >= win_height) {
+    y_incr = ~y_incr + 1;
+  }
 }
 
 function frameBounce() {
-	let dvd_height = dvdclass.infoblock.offsetHeight;
-  	let dvd_width = dvdclass.infoblock.offsetWidth;
-  	let left = dvdclass.infoblock.offsetLeft;
-  	let top = dvdclass.infoblock.offsetTop;
-  	handle_collision();
-  	dvdclass.infoblock.style.top = top + y_incr;
-  	dvdclass.infoblock.style.left = left + x_incr;
+	let height = blockclass.infoblock.offsetHeight;
+  let width = blockclass.infoblock.offsetWidth;
+  let left = blockclass.infoblock.offsetLeft;
+  let top = blockclass.infoblock.offsetTop;
+  handle_collision();
+  blockclass.infoblock.style.top = top + y_incr;
+  blockclass.infoblock.style.left = left + x_incr;
 }
 
 
-function CheckScrollHeight() {
-	let scrollheight = document.getElementsByClassName()
-}
+// function CheckScrollHeight() {
+// 	let scrollheight = document.getElementsByClassName()
+// }
 
 

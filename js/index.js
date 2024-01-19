@@ -13,11 +13,11 @@ $(document).ready(function(){
 	setTimeout(typeWriter, speed);
 
 	function typeWriter() {
-	  if (i < txt.length) {
-	    document.getElementById("typing").innerHTML += txt.charAt(i);
-	    i++;
-	    setTimeout(typeWriter, speed);
-	  }
+		if (i < txt.length) {
+			document.getElementById("typing").innerHTML += txt.charAt(i);
+			i++;
+			setTimeout(typeWriter, speed);
+		}
 	}
 
 
@@ -25,29 +25,29 @@ $(document).ready(function(){
 })
 
 function handle_collision() {
-  let height = blockclass.infoblock.offsetHeight;
-  let width = blockclass.infoblock.offsetWidth;
-  let left = blockclass.infoblock.offsetLeft;
-  let top = blockclass.infoblock.offsetTop;
-  let win_height = document.getElementsByClassName('background-info').backgroundinfo.offsetHeight;
-  let win_width = document.getElementsByClassName('background-info').backgroundinfo.offsetWidth;
+	let height = blockclass.infoblock.offsetHeight;
+	let width = blockclass.infoblock.offsetWidth;
+	let left = blockclass.infoblock.offsetLeft;
+	let top = blockclass.infoblock.offsetTop;
+	let win_height = document.getElementsByClassName('background-info').backgroundinfo.offsetHeight;
+	let win_width = document.getElementsByClassName('background-info').backgroundinfo.offsetWidth;
 
-  if (left <= 0 || left + width >= win_width) {
-    x_incr = ~x_incr + 1;
-  }
-  if (top <= 30 || top + height >= win_height) {
-    y_incr = ~y_incr + 1;
-  }
+	if (left <= 0 || left + width >= win_width) {
+		x_incr = ~x_incr + 1;
+	}
+	if (top <= 30 || top + height >= win_height) {
+		y_incr = ~y_incr + 1;
+	}
 }
 
 function frameBounce() {
 	let height = blockclass.infoblock.offsetHeight;
-  let width = blockclass.infoblock.offsetWidth;
-  let left = blockclass.infoblock.offsetLeft;
-  let top = blockclass.infoblock.offsetTop;
-  handle_collision();
-  blockclass.infoblock.style.top = top + y_incr;
-  blockclass.infoblock.style.left = left + x_incr;
+	let width = blockclass.infoblock.offsetWidth;
+	let left = blockclass.infoblock.offsetLeft;
+	let top = blockclass.infoblock.offsetTop;
+	handle_collision();
+	blockclass.infoblock.style.top = top + y_incr;
+	blockclass.infoblock.style.left = left + x_incr;
 }
 
 

@@ -19,9 +19,6 @@ $(document).ready(function(){
 			setTimeout(typeWriter, speed);
 		}
 	}
-
-
-
 })
 
 function handle_collision() {

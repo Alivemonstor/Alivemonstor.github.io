@@ -7,6 +7,15 @@ let slideIndex = 0;
 $(document).ready(function(){
 	setInterval(frameBounce, 5);
 
+	if (!checkVisible($('.topnav'))) {
+		$('.movingnav').css("display", "block")
+		$('.topnav').css("display", "none")
+	} else {
+		$('.topnav').css("display", "block")
+		$('.movingnav').css("display", "none")
+	}
+
+
 	var i = 0;
 	var txt = 'Hi, I\'m Jayden, Welcome To My Website';
 	var speed = 70;
@@ -20,6 +29,32 @@ $(document).ready(function(){
 		}
 	}
 })
+
+$(window).on( "scroll", function() {
+	if (!checkVisible($('.topnav'))) {
+		$('.movingnav').css("display", "block")
+		$('.movingnav').css("animation-name", "fadein")
+		$('.movingnav').css("animation-duration", "0.5s")
+		$('.topnav').css("display", "none")
+	} else {
+		$('.topnav').css("display", "block")
+		$('.topnav').css("animation-name", "fadein")
+		$('.topnav').css("animation-duration", "0.5s")
+		$('.movingnav').css("display", "none")
+	}
+});
+
+function checkVisible( elm, evalType ) {
+    evalType = evalType || "visible";
+
+    var vpH = $(window).height(), // Viewport Height
+        st = $(window).scrollTop(), // Scroll Top
+        y = $(elm).offset().top,
+        elementHeight = $(elm).height();
+
+    if (evalType === "visible") return ((y < (vpH + st)) && (y > (st - elementHeight)));
+    if (evalType === "above") return ((y < (vpH + st)));
+}
 
 function handle_collision() {
 	let height = blockclass.infoblock.offsetHeight;
@@ -48,8 +83,5 @@ function frameBounce() {
 }
 
 
-// function CheckScrollHeight() {
-// 	let scrollheight = document.getElementsByClassName()
-// }
 
 

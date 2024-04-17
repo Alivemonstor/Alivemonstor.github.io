@@ -178,7 +178,8 @@ img {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  height: 20%;
+  text-align: center;
+  height: 16%;
   width: 100%;
   background-color:rgba(50, 50, 50, 0.65) ;
 }

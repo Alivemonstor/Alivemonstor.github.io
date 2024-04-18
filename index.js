@@ -5,7 +5,6 @@ let y_incr = 1;
 let slideIndex = 0;
 
 $(document).ready(function(){
-	// showSlides();
 	setInterval(frameBounce, 5);
 
 	var i = 0;

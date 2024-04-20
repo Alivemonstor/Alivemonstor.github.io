@@ -1,7 +1,6 @@
 let slideIndex = 0;
 
 $(document).ready(function(){
-	showSlides();
 
   if (!checkVisible($('.topnav'))) {
 		$('.movingnav').css("display", "block")
@@ -9,6 +8,22 @@ $(document).ready(function(){
 	} else {
 		$('.topnav').css("display", "block")
 		$('.movingnav').css("display", "none")
+	}
+
+
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+	
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.maxHeight){
+		  content.style.maxHeight = null;
+		} else {
+		  content.style.maxHeight = content.scrollHeight + "px";
+		}
+	  });
 	}
 })
 
@@ -27,17 +42,6 @@ $(window).on( "scroll", function() {
 	}
 });
 
-function showSlides() {
-  let i;
-  const slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1} // if slideindex is greater than slides.length then slideindex = 1
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 5000); 
-}
 
 
 function checkVisible( elm, evalType ) {

@@ -238,6 +238,7 @@ body {
 }
 
 .content {
+  border: 1px solid var(--grey);
   color: var(--white);
   padding: 0 18px;
   background-color: var(--grey);

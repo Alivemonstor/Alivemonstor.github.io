@@ -215,7 +215,7 @@ body {
 }
 
 
-.TitleEXP {
+.Title {
   display: flex;
   justify-content: center;
 }
@@ -245,4 +245,25 @@ body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+.aboutme {
+	background: #1f2323;
+  border: 2px solid  var(--white);
+  border-radius: 5px;  
+  width: 60%;
+  margin-bottom: 5%;
+  margin-top: 1%;
+
+}
+
+.Aboutmainelement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Showcasemainelement {
+  display: flex;
 }

@@ -1,17 +1,20 @@
 let showcaseItems = {
     "al-treasurehunt" : {
+        "name": "al-treasurehunt",
         "link": "https://github.com/Alivemonstor/al-treasurehunt",
         "shortdesc": "FiveM Treasurehunt System",
         "description": "A treasure hunt script made for the FiveM platform. This script allows you to create treasure hunts for players to find and earn rewards.",
         "image": "imgs/treasure.png"
     },
     "al-reputation" : {
+        "name": "al-reputation",
         "link": "https://www.youtube.com/watch?v=LnpSPi2QfeQ",
         "shortdesc": "FiveM Reputation System",
         "description": "A reputation system made for the FiveM platform. This script allows players to gain reputation by completing tasks and missions.",
         "image": "imgs/reputation.png"
     },
     "Custom Inventory" : {
+        "name": "ps-inventory",
         "link": "https://github.com/Alivemonstor/ps-inventory",
         "description": "A custom inventory system made for the FiveM platform. This script allows players to store items in their inventory.",
         "shortdesc": "FiveM Inventory System",
@@ -20,19 +23,19 @@ let showcaseItems = {
 }
 
 $(document).ready(function(){
-    var showcase = $(".Showcasemainelement");
+    var showcase = $(".showcasecontainer");
     let length = Object.keys(showcaseItems).length;
     for (let i = 0; i < length; i++) {
         showcase.append(`
         <div class="Showcase" id=${i}>
             <div class="Showcaseimg">
-            <a href=${showcaseItems[Object.keys(showcaseItems)[i]].link}>
-                <img src=${showcaseItems[Object.keys(showcaseItems)[i]].image} alt="Image">
-            </a>
-            </div>
-            <div class="Showcasetext">
-                <h3>${showcaseItems[Object.keys(showcaseItems)[i]]}</h3>
-                <p>${showcaseItems[Object.keys(showcaseItems)[i]].shortdesc}</p>
+                <a href=${showcaseItems[Object.keys(showcaseItems)[i]].link}>
+                    <img src=${showcaseItems[Object.keys(showcaseItems)[i]].image} alt="Image">
+                    <div class="Showcasetext">
+                        <h3 class="Title">${showcaseItems[Object.keys(showcaseItems)[i]].name}</h3>
+                        <p>${showcaseItems[Object.keys(showcaseItems)[i]].shortdesc}</p>
+                    </div>
+                </a>
             </div>
         </div>`)
     }

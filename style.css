@@ -264,6 +264,30 @@ body {
   align-items: center;
 }
 
-.Showcasemainelement {
+.showcasecontainer {
   display: flex;
+  flex-direction: row;
+}
+
+.showcasecontainer img{
+  width: 20vw;
+  height: 40vh;
+}
+
+.Showcasetext {
+  position: absolute;
+  bottom: 20px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+.Showcasetext > .Title {
+  text-transform: uppercase;
+}
+
+.showcaseimg {
+  position: relative;
 }

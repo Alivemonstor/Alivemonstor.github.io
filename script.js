@@ -147,7 +147,7 @@ let experiences = [
     {
         title: "Staffordshire University - Games Development",
         date: "2024 - Present",
-        description: "Pursuing a degree in Games Development. Using Unity and Unreal Engine enhance my skills in programming. Learning advanced game design and development techniques."
+        description: "Pursuing a degree in Games Development. Using Unity and Unreal Engine to enhance my skills in programming. Learning advanced game design and development techniques."
     },
     {
         title: "College - Games Development",

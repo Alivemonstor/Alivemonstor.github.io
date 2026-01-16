@@ -32,6 +32,46 @@ let projects = [
         ]
     },
     {
+        title: "Bar Simulator Gameplay Mechanics Demo ",
+        description: "A bar simulator demo showcasing gameplay mechanics.",
+        detailedDescription: `
+            <p>A bar simulator demo developed to showcase various gameplay mechanics learned during my studies.</p>
+            <h6>Key Features:</h6>
+            <ul>
+                <li>Player interaction with bar elements</li>
+                <li>Basic inventory system</li>
+                <li>Simple AI customer behavior</li>
+            </ul>
+            <h6>Technologies Used:</h6>
+            <p>Unreal Engine 5, C++, Blueprints</p>
+        `,
+        image: "assets/images/barsimulator.png",
+        type: "university",
+        links: [
+            { "Video Playlist": "https://youtube.com/playlist?list=PL459_3aNMMNYOiBdXBgCXhJlKi4s1HTbQ&si=KcS-D0BitwTafCuZ" }
+        ]
+    },
+    {
+        title: "Unreal Engine 5 Lua Wrapper",
+        description: "A Script wrapper to integrate Lua scripting into Unreal Engine 5 projects.",
+        detailedDescription: `
+            <p>A Plugin to integrate Lua scripting into Unreal Engine 5 projects, enabling more flexible and dynamic game development.</p>
+            <h6>Key Features:</h6>
+            <ul>
+                <li>Seamless integration with Unreal Engine 5</li>
+                <li>Support for Lua scripting language</li>
+                <li>Easy to use API for game developers</li>
+            </ul>
+            <h6>Technologies Used:</h6>
+            <p>Unreal Engine 5, C++, Lua</p>
+        `,
+        image: "assets/images/lua.png",
+        type: "university",
+        links: [
+            { "Showcase Coming Soon": "" }
+        ]   
+    },
+    {
         title: "FiveM Shop and Boss Menu UI",
         description: "A user interface for in-game shop and managing boss actions.",
         detailedDescription: `
@@ -161,86 +201,86 @@ let experiences = [
     },
 ];
 
-$(document).ready(function() {
+$(document).ready(function () {
     var projectContainer = $("#projects .row");
     for (let i = 0; i < projects.length; i++) {
         const project = projects[i];
         var projectCard = `
             <div class="col-md-4 ${project.type}">
                 <div class="card h-100">
-                    <img src="${project.image}"  class="card-img-top" alt="${project.title}">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">${project.title}</h5>
-                        <p class="card-text flex-grow-1">${project.description}</p>
-                        <button class="btn btn-primary btn-sm mt-auto view-details-btn" data-project-index="${i}">View Details</button>
-                    </div>
+                    <img src="${project.image}" class="card-img-top" alt="${project.title}">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">${project.title}</h5>
+                            <p class="card-text flex-grow-1">${project.description}</p>
+                            <button class="btn btn-primary btn-sm mt-auto view-details-btn" data-project-index="${i}">View Details</button>
+                        </div>
                 </div>
-            </div>
-        `;
+            </div >
+    `;
         projectContainer.append(projectCard);
     };
-    
+
     var timelineContainer = $(".timeline");
     for (let i = 0; i < experiences.length; i++) {
         const experience = experiences[i];
         var timelineItem = `
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h4>${experience.title}</h4>
-                    <div class="date">${experience.date}</div>
-                    <p>${experience.description}</p>
-                </div>
-            </div>
-        `;
+    <div class="timeline-item" >
+        <div class="timeline-content">
+            <h4>${experience.title}</h4>
+            <div class="date">${experience.date}</div>
+            <p>${experience.description}</p>
+        </div>
+            </div >
+    `;
         timelineContainer.append(timelineItem);
     };
-    
-    $(document).on('click', '.view-details-btn', function() {
+
+    $(document).on('click', '.view-details-btn', function () {
         const projectIndex = $(this).data('project-index');
         const project = projects[projectIndex];
-        
+
         $('#modalprojecttitle').text(project.title);
         $('#modalprojecttype').text(project.type.charAt(0).toUpperCase() + project.type.slice(1));
         $('#modalprojectimage').attr('src', project.image);
         $('#modalprojectdescription').html(project.detailedDescription);
-        
+
         const linksContainer = $('#modalprojectlinks');
         linksContainer.empty();
-        
+
         project.links.forEach(linkObj => {
             Object.entries(linkObj).forEach(([text, url]) => {
-                const linkButton = `<a href="${url}" class="btn btn-primary btn-sm" target="_blank">${text}</a>`;
+                const linkButton = `<a href = "${url}" class="btn btn-primary btn-sm" target = "_blank" > ${text}</a > `;
                 linksContainer.append(linkButton);
             });
         });
-        
+
         $('#projectmodal').modal('show');
     });
-    
-	setTimeout(typeWriter, typingSpeed);
 
-    $(".dropdown-item").on("click", function(e){
+    setTimeout(typeWriter, typingSpeed);
+
+    $(".dropdown-item").on("click", function (e) {
         switch ($(this).data("filter")) {
             case "all":
                 $("#projects .row").children().show();
                 break;
             default:
                 $("#projects .row").children().hide();
-                $("#projects .row").children(`.${$(this).data("filter")}`).show();
+                $("#projects .row").children(`.${$(this).data("filter")} `).show();
         }
     });
 });
 
 function typeWriter() {
-	if (typingindex < txt.length) {
-		document.getElementById("typing").innerHTML += txt.charAt(typingindex);
-		typingindex++;
-		setTimeout(typeWriter, typingSpeed);
-	}
+    if (typingindex < txt.length) {
+        document.getElementById("typing").innerHTML += txt.charAt(typingindex);
+        typingindex++;
+        setTimeout(typeWriter, typingSpeed);
+    }
 }
 
-$("a.nav-link").on("click", function(e){
-    if(this.hash !== ""){
+$("a.nav-link").on("click", function (e) {
+    if (this.hash !== "") {
         e.preventDefault();
         const hash = this.hash;
         $("html, body").animate({ scrollTop: $(hash).offset().top - 60 }, 800);

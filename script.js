@@ -68,8 +68,8 @@ let projects = [
         image: "assets/images/lua.png",
         type: "university",
         links: [
-            { "Showcase Coming Soon": "" }
-        ]   
+            { "Video Playlist": "https://youtube.com/playlist?list=PL459_3aNMMNb0SNKg-AjYfA6d_Qd56DSy&si=OHfU8fH1dPFTP9gX" }
+        ]
     },
     {
         title: "FiveM Shop and Boss Menu UI",

@@ -48,7 +48,8 @@ let projects = [
         image: "assets/images/barsimulator.png",
         type: "university",
         links: [
-            { "Video Playlist": "https://youtube.com/playlist?list=PL459_3aNMMNYOiBdXBgCXhJlKi4s1HTbQ&si=KcS-D0BitwTafCuZ" }
+            { "Video Playlist": "https://youtube.com/playlist?list=PL459_3aNMMNYOiBdXBgCXhJlKi4s1HTbQ&si=KcS-D0BitwTafCuZ" },
+            { "GitHub Repository": "https://github.com/Alivemonstor/CPP_ForEngines_BarSim" }
         ]
     },
     {
